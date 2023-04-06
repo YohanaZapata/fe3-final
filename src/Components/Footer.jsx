@@ -1,10 +1,13 @@
 import React from 'react'
+import logo from '../imagenes/DH.png'
+import { useContextGlobal } from './utils/global.context'
 
 const Footer = () => {
+  const {themeState} = useContextGlobal();
   return (
-    <footer>
+    <footer className={themeState.theme}>
         <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+        <img src={logo} alt='DH-logo' />
     </footer>
   )
 }
